@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anand Dutta | Frontend Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Anand Dutta's portfolio - Frontend Developer specializing in interactive web experiences."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <div class="bg-blobs" aria-hidden="true">
+      <span class="blob blob-a"></span>
+      <span class="blob blob-b"></span>
+      <span class="blob blob-c"></span>
+    </div>
+    <div class="code-layer" aria-hidden="true">
+      <span class="code-line">const portfolio = { name: "Anand", role: "Frontend Developer" };</span>
+      <span class="code-line">function buildExperience() { return "smooth + interactive"; }</span>
+      <span class="code-line">await fetch("/projects").then(renderCards);</span>
+      <span class="code-line">if (user.scrolls) animateIn(section);</span>
+      <span class="code-line">&lt;Performance score="high" accessibility="first" /&gt;</span>
+      <span class="code-line">git commit -m "ship polished UI"</span>
+      <span class="code-line">const ui = compose(clarity, motion, performance);</span>
+      <span class="code-line">router.push("/projects/transit-live");</span>
+      <span class="code-line">useEffect(() =&gt; initAnimations(), []);</span>
+      <span class="code-line">SELECT name FROM projects WHERE status = "featured";</span>
+      <span class="code-line">npm run build &amp;&amp; npm run deploy</span>
+      <span class="code-line">class ExperienceCard extends HTMLElement { connectedCallback() {} }</span>
+    </div>
+    <div class="noise-layer" aria-hidden="true"></div>
+
+    <header class="navbar glass" id="navbar">
+      <a class="brand" href="#home">Anand.dev</a>
+      <div class="nav-actions">
+        <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">Menu</button>
+        <nav id="mainNav">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#journey" class="nav-link">Journey</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Creative Engineering Meets Product Thinking</p>
+          <h1>Hi, I'm Anand Dutta - Frontend Developer</h1>
+          <p class="subtitle">
+            I'm a second-year B.Tech CSE student building elegant web products and modern frontend interfaces
+            with a strong focus on usability and performance.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+            <a href="#about" class="btn btn-ghost">ABOUT ME</a>
+          </div>
+          <div class="live-chip glass reveal" id="liveChip" aria-live="polite">
+            <span class="pulse" aria-hidden="true"></span>
+            <strong>Open to Frontend Internships</strong>
+            <span id="localTime">Local time: --:--:--</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" id="heroVisual">
+          <div class="avatar-card glass parallax" data-depth="14">
+            <img class="avatar-photo" src="./images/profile.heic" alt="Anand Dutta" loading="eager" />
+          </div>
+
+          <div class="floating-pill glass parallax" data-depth="24">UI Motion</div>
+          <div class="floating-pill glass parallax" data-depth="20">APIs + Systems</div>
+          <div class="floating-pill glass parallax" data-depth="28">3D Interfaces</div>
+
+          <div class="code-preview glass parallax" data-depth="12">
+            <pre><code>const craft = (idea) =>
+  ship({
+    quality: "premium",
+    speed: "fast",
+    delight: true
+  });</code></pre>
+          </div>
+        </div>
+
+        <a href="#about" class="scroll-indicator" aria-label="Scroll to About">
+          <span></span>
+        </a>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="section-head reveal">
+          <p class="eyebrow">About</p>
+          <h2>Design-minded developer with a systems brain</h2>
+        </div>
+        <div class="about-grid">
+          <article class="about-card glass reveal">
+            <div class="about-avatar">
+              <img src="./images/profile.heic" alt="Anand Dutta" loading="lazy" />
+            </div>
+            <p>
+              I'm currently in the second year of B.Tech in Computer Science and Engineering, and I enjoy
+              turning ideas into full web products from architecture to polished UI.
+            </p>
+            <p>
+              I enjoy building scalable backends, expressive frontends, and practical projects that solve
+              real user problems.
+            </p>
+          </article>
+
+          <article class="about-card glass reveal">
+            <h3>Tech Interests</h3>
+            <ul class="interest-list">
+              <li>Interactive Web Experiences</li>
+              <li>Realtime Data & API Design</li>
+              <li>Creative Frontend Engineering</li>
+              <li>Performance Optimization</li>
+            </ul>
+            <div class="counters">
+              <div class="counter-item">
+                <strong data-counter="2">0</strong>
+                <span>Years Building</span>
+              </div>
+              <div class="counter-item">
+                <strong data-counter="5+">0</strong>
+                <span>Projects Delivered</span>
+              </div>
+              <div class="counter-item">
+                <strong data-counter="10+">0</strong>
+                <span>Certifications</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="skills section" id="skills">
+        <div class="section-head reveal">
+          <p class="eyebrow">Skills</p>
+          <h2>Tools I rely on to build polished products</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card glass reveal" data-skill="HTML" data-detail="Semantic structures and accessibility-first markup.">
+            <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML logo" loading="lazy" /></span><span>HTML</span>
+          </article>
+          <article class="skill-card glass reveal" data-skill="CSS" data-detail="Modern layout systems, animation choreography, and design systems.">
+            <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS logo" loading="lazy" /></span><span>CSS</span>
+          </article>
+          <article class="skill-card glass reveal" data-skill="JavaScript" data-detail="App architecture, interaction logic, and runtime performance tuning.">
+            <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo" loading="lazy" /></span><span>JavaScript</span>
+          </article>
+          <article class="skill-card glass reveal" data-skill="Python" data-detail="Automation, backend services, and data processing workflows.">
+            <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo" loading="lazy" /></span><span>Python</span>
+          </article>
+          <article class="skill-card glass reveal" data-skill="C++" data-detail="Low-level performance engineering and algorithmic problem solving.">
+            <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++ logo" loading="lazy" /></span><span>C++</span>
+          </article>
+          <article class="skill-card glass reveal" data-skill="Firebase" data-detail="Realtime sync, auth, and serverless product infrastructure.">
+            <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase logo" loading="lazy" /></span><span>Firebase</span>
+          </article>
+          <article class="skill-card glass reveal" data-skill="MongoDB" data-detail="Document modeling, indexing, and scalable data access patterns.">
+            <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB logo" loading="lazy" /></span><span>MongoDB</span>
+          </article>
+          <article class="skill-card glass reveal" data-skill="Postman" data-detail="API testing, collections, and collaborative endpoint workflows.">
+            <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman logo" loading="lazy" /></span><span>Postman</span>
+          </article>
+        </div>
+        <p class="skill-detail glass" id="skillDetail">Hover a skill card to preview specialization details.</p>
+      </section>
+
+      <section class="projects section" id="projects">
+        <div class="section-head reveal">
+          <p class="eyebrow">Projects</p>
+          <h2>Selected work with engineering depth and visual polish</h2>
+        </div>
+
+        <div class="project-filters reveal" id="projectFilters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend</button>
+          <button class="filter-btn" data-filter="creative">Creative</button>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card glass reveal tilt-card" data-project="assam" data-type="frontend creative">
+            <img
+              class="project-image"
+              src="./images/projects/assam-tourism.webp.avif"
+              alt="Explore Assam Tourism and Heritage project preview"
+              loading="lazy"
+            />
+            <h3>Explore Assam Tourism and Heritage</h3>
+            <p>Smooth tourism platform with focused UX improvements and clean navigation flow.</p>
+            <div class="tags"><span>JavaScript</span><span>UI/UX</span><span>Web</span></div>
+            <div class="project-actions">
+              <a href="https://github.com/Ananddutta/explore-Assam-tourism-and-heritage" target="_blank" rel="noreferrer" aria-label="Explore Assam GitHub">GitHub</a>
+              <a href="https://github.com/Ananddutta/explore-Assam-tourism-and-heritage" target="_blank" rel="noreferrer" aria-label="Explore Assam Live Demo">View Repo</a>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal tilt-card" data-project="transit" data-type="frontend backend">
+            <img
+              class="project-image"
+              src="./images/projects/transit-live.png"
+              alt="Transit-Live project preview"
+              loading="lazy"
+            />
+            <h3>Transit-Live</h3>
+            <p>Real-time public transit monitoring with map integrations and live vehicle tracking.</p>
+            <div class="tags"><span>JavaScript</span><span>Maps</span><span>Realtime</span></div>
+            <div class="project-actions">
+              <a href="https://github.com/Ananddutta/Transit-Live" target="_blank" rel="noreferrer" aria-label="Transit Live GitHub">GitHub</a>
+              <a href="https://github.com/Ananddutta/Transit-Live" target="_blank" rel="noreferrer" aria-label="Transit Live Live Demo">View Repo</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="projects-more reveal">
+          <a class="btn btn-ghost" href="https://github.com/Ananddutta?tab=repositories" target="_blank" rel="noreferrer">More Projects</a>
+        </div>
+
+        <section class="spotlight glass reveal" id="spotlight" aria-label="Project Spotlight">
+          <div class="spotlight-top">
+            <p class="eyebrow">Spotlight</p>
+            <div class="spotlight-controls">
+              <button class="spotlight-btn" id="spotlightPrev" aria-label="Previous spotlight">Prev</button>
+              <button class="spotlight-btn" id="spotlightNext" aria-label="Next spotlight">Next</button>
+            </div>
+          </div>
+          <h3 id="spotlightTitle">Explore Assam Tourism and Heritage</h3>
+          <p id="spotlightText">Tourism-focused web experience with smooth navigation improvements and user-friendly browsing flows.</p>
+          <a id="spotlightLink" href="https://github.com/Ananddutta/explore-Assam-tourism-and-heritage" target="_blank" rel="noreferrer">Open Repository</a>
+          <div class="spotlight-progress" aria-hidden="true"><span id="spotlightBar"></span></div>
+        </section>
+
+        <div class="interactive-terminal glass reveal" id="terminal">
+          <div class="terminal-head">
+            <span></span><span></span><span></span>
+            <p>interactive-terminal.sh</p>
+          </div>
+          <div class="terminal-body" id="terminalBody"></div>
+          <div class="terminal-actions" id="terminalActions">
+            <button class="terminal-btn" data-cmd="skills">Run `skills`</button>
+            <button class="terminal-btn" data-cmd="projects">Run `projects`</button>
+            <button class="terminal-btn" data-cmd="contact">Run `contact`</button>
+            <button class="terminal-btn" data-cmd="game">Play `fluffy runner`</button>
+          </div>
+          <div class="terminal-game glass" id="terminalGame" hidden>
+            <p><strong>Fluffy Runner:</strong> Press Space or tap to jump and dodge obstacles.</p>
+            <canvas id="runnerCanvas" width="360" height="140" aria-label="Fluffy Runner mini game"></canvas>
+            <div class="game-controls">
+              <button id="gameStartBtn" class="terminal-btn">Start</button>
+              <button id="gameResetBtn" class="terminal-btn">Reset</button>
+            </div>
+            <p id="gameStatus">Press <code>Play `fluffy runner`</code> to start.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="journey section" id="journey">
+        <div class="section-head reveal">
+          <p class="eyebrow">Build Journey</p>
+          <h2>How I grew from student to product-focused frontend developer</h2>
+        </div>
+
+        <div class="journey-track reveal" id="journeyTrack" role="tablist" aria-label="Journey milestones">
+          <button class="journey-node active" data-step="0" role="tab" aria-selected="true">Started B.Tech CSE</button>
+          <button class="journey-node" data-step="1" role="tab" aria-selected="false">Assam Tourism Build</button>
+          <button class="journey-node" data-step="2" role="tab" aria-selected="false">Transit-Live Build</button>
+          <button class="journey-node" data-step="3" role="tab" aria-selected="false">Lakshya Platform Build</button>
+        </div>
+
+        <article class="journey-panel glass reveal" id="journeyPanel" role="tabpanel" aria-live="polite">
+          <h3 id="journeyTitle">Started B.Tech CSE</h3>
+          <p id="journeyProblem"><strong>Problem:</strong> Needed a structured way to improve software foundations while building practical projects.</p>
+          <p id="journeyBuild"><strong>What I Built:</strong> Daily coding workflow with mini web projects and stronger frontend fundamentals.</p>
+          <p id="journeyTech"><strong>Tech Used:</strong> HTML, CSS, JavaScript, C++</p>
+          <p id="journeyLearning"><strong>Key Learning:</strong> Consistency beats intensity. Small daily progress compounds quickly.</p>
+          <p id="journeyNext"><strong>What I'd Improve Next:</strong> Add stronger test coverage and reusable component architecture.</p>
+        </article>
+
+        <div class="compare-wrap glass reveal">
+          <div class="compare-slider" id="compareSliderArea">
+            <div class="compare-before" aria-label="Before layout"></div>
+            <div class="compare-after" id="compareAfterLayer" aria-label="After refined layout"></div>
+            <span class="compare-divider" aria-hidden="true"></span>
+          </div>
+          <label class="compare-control" for="compareRange">
+            <span>Refinement Level</span>
+            <input id="compareRange" type="range" min="0" max="100" value="58" />
+          </label>
+        </div>
+
+        <div class="focus-meter glass reveal">
+          <p><strong>Current Focus:</strong> Frontend Internship + DSA + React</p>
+          <div class="focus-bar" aria-hidden="true"><span id="focusBar"></span></div>
+        </div>
+      </section>
+
+      <section class="experience section" id="experience">
+        <div class="section-head reveal">
+          <p class="eyebrow">Experience</p>
+          <h2>Developer journey</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="dot"></span>
+            <div class="timeline-card glass">
+              <h3>2026 - Second-Year B.Tech CSE</h3>
+              <p>Actively building web development projects while strengthening core computer science fundamentals.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="dot"></span>
+            <div class="timeline-card glass">
+              <h3>2024 - Advanced Certifications</h3>
+              <p>Earned certifications in cloud engineering, APIs, and scalable backend architecture.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="dot"></span>
+            <div class="timeline-card glass">
+              <h3>2024 - Started B.Tech CSE Journey</h3>
+              <p>Began computer science degree and started building practical web applications.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="section-head reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's build something memorable</h2>
+        </div>
+
+        <div class="contact-grid">
+          <form
+            class="contact-form glass reveal"
+            id="contactForm"
+            action="https://formsubmit.co/mail2anand2024@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New Portfolio Message from ananddutta.site" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary send-btn">Send Message</button>
+          </form>
+
+          <aside class="contact-links glass reveal">
+            <a href="mailto:mail2anand2024@gmail.com">
+              <svg class="app-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm2 0l8 5 8-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Email Anand</span>
+            </a>
+            <a href="https://github.com/Ananddutta" target="_blank" rel="noreferrer">
+              <svg class="app-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.11.78-.24.78-.55 0-.27-.01-1.16-.01-2.1-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.35.95.11-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.3 1.2-3.12-.12-.29-.52-1.47.11-3.07 0 0 .98-.31 3.2 1.19a11.2 11.2 0 0 1 5.83 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.6.23 2.78.11 3.07.75.82 1.2 1.86 1.2 3.12 0 4.44-2.7 5.41-5.27 5.69.41.35.78 1.05.78 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.2.67.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" fill="currentColor"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+              <svg class="app-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4.98 3.5A2.49 2.49 0 1 0 5 8.48 2.49 2.49 0 0 0 4.98 3.5zM3 9h4v12H3zM9.5 9h3.83v1.64h.05c.53-1.01 1.84-2.08 3.78-2.08C21.2 8.56 22 11.1 22 14.4V21h-4v-5.84c0-1.39-.03-3.17-1.93-3.17-1.93 0-2.23 1.51-2.23 3.07V21h-4z" fill="currentColor"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" aria-pressed="false">
+      <span id="themeToggleIcon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3c-.05.33-.08.66-.08 1a8 8 0 0 0 8 8c.34 0 .67-.03 1-.08z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span id="themeToggleLabel">Dark</span>
+    </button>
+
+    <footer class="footer">
+      <div class="footer-line"></div>
+      <p>© 2026 Anand Dutta. Crafted with code and intention.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/Ananddutta" target="_blank" rel="noreferrer">
+          <svg class="app-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.11.78-.24.78-.55 0-.27-.01-1.16-.01-2.1-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.35.95.11-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.3 1.2-3.12-.12-.29-.52-1.47.11-3.07 0 0 .98-.31 3.2 1.19a11.2 11.2 0 0 1 5.83 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.6.23 2.78.11 3.07.75.82 1.2 1.86 1.2 3.12 0 4.44-2.7 5.41-5.27 5.69.41.35.78 1.05.78 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.2.67.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" fill="currentColor"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+          <svg class="app-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4.98 3.5A2.49 2.49 0 1 0 5 8.48 2.49 2.49 0 0 0 4.98 3.5zM3 9h4v12H3zM9.5 9h3.83v1.64h.05c.53-1.01 1.84-2.08 3.78-2.08C21.2 8.56 22 11.1 22 14.4V21h-4v-5.84c0-1.39-.03-3.17-1.93-3.17-1.93 0-2.23 1.51-2.23 3.07V21h-4z" fill="currentColor"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="mailto:mail2anand2024@gmail.com">
+          <svg class="app-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm2 0l8 5 8-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Email</span>
+        </a>
+      </div>
+    </footer>
+
+    <dialog id="projectModal" class="project-modal glass">
+      <button id="closeModal" class="close-modal" aria-label="Close details">×</button>
+      <div id="modalContent"></div>
+    </dialog>
+
+    <div class="quick-jump glass" id="quickJump" hidden>
+      <div class="quick-jump-head">
+        <strong>Quick Jump</strong>
+        <small>Press `Esc` to close</small>
+      </div>
+      <div class="quick-jump-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="project-hover-preview glass" id="projectHoverPreview" aria-hidden="true">
+      <strong id="hoverPreviewTitle">Project</strong>
+      <p id="hoverPreviewText">Move over project cards to preview.</p>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
